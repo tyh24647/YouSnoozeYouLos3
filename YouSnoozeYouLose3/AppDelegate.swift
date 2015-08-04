@@ -24,13 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Init Parse analytics
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions);
         
-        ///TEST
+        /*//TEST
         let testObject = PFObject(className: "TestObject")
         testObject["foo"] = "bar"
         testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             print("Object has been saved.");
-        }///
+        }*///
         
+        /* TEST
         let tableVC: AlarmsTableViewController = AlarmsTableViewController(className: "Alarm");
         tableVC.title = "Alarms";
         
@@ -48,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: frame);
         window!.rootViewController = navigationVC;
         window!.makeKeyAndVisible();
+        */
         
         return true;
     }

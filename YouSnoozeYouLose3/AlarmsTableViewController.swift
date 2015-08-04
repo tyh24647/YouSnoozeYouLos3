@@ -49,8 +49,10 @@ class AlarmsTableViewController: PFQueryTableViewController {
     
     
     required init?(coder aDecoder: NSCoder) {
-        let tmpStr = "NSCoding is not currently supported at this time";
-        fatalError(tmpStr);
+        super.init(style: UITableViewStyle.Plain, className: "Alarm");
+        //let tmpStr = "NSCoding is not currently supported at this time";
+        //fatalError(tmpStr);
+        initTableViewDefaults("Alarm");
     }
     
     
@@ -59,7 +61,6 @@ class AlarmsTableViewController: PFQueryTableViewController {
     *  MARK: OBJECT FUNCTIONALITY/METHODS  *
     ***************************************/
     override func viewDidLoad() {
-        
         super.viewDidLoad();
     }
     
