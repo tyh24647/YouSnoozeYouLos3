@@ -15,8 +15,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+        
+        // Init Parse framework
+        Parse.enableLocalDatastore();
+        Parse.setApplicationId("ASna5zhM1oPopmrPEsTIzdohzDV2YcKUQosm2fAh",
+            clientKey: "VRUGIJMR8wXiE98pMeYf9yT7M0jceUWDHkcZdWlD");
+        
+        // Init Parse analytics
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions);
+        
+        ///TEST
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.");
+        }///
+        
+        let tableVC: AlarmsTableViewController = AlarmsTableViewController(className: "Alarm");
+        tableVC.title = "Alarms";
+        
+        
+        UINavigationBar.appearance().tintColor = UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0);
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0);
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()];
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
+        UIApplication.sharedApplication().statusBarHidden = false;
+        
+        
+        let navigationVC = UINavigationController(rootViewController: tableVC);
+        let frame = UIScreen.mainScreen().bounds;
+        
+        window = UIWindow(frame: frame);
+        window!.rootViewController = navigationVC;
+        window!.makeKeyAndVisible();
+        
+        return true;
     }
 
     func applicationWillResignActive(application: UIApplication) {

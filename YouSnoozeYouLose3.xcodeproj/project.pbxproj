@@ -12,6 +12,20 @@
 		1A531B2B1B70590F00EACAD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A531B291B70590F00EACAD6 /* Main.storyboard */; };
 		1A531B2D1B70590F00EACAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A531B2C1B70590F00EACAD6 /* Assets.xcassets */; };
 		1A531B301B70590F00EACAD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A531B2E1B70590F00EACAD6 /* LaunchScreen.storyboard */; };
+		1A6A8EA81B705BF500A5ED4C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EA71B705BF500A5ED4C /* AudioToolbox.framework */; };
+		1A6A8EAA1B705C0600A5ED4C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EA91B705C0600A5ED4C /* CFNetwork.framework */; };
+		1A6A8EAC1B705C0C00A5ED4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EAB1B705C0C00A5ED4C /* CoreGraphics.framework */; };
+		1A6A8EAE1B705C2400A5ED4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EAD1B705C2400A5ED4C /* CoreLocation.framework */; };
+		1A6A8EB01B705C2D00A5ED4C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EAF1B705C2D00A5ED4C /* QuartzCore.framework */; };
+		1A6A8EB21B705C3400A5ED4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EB11B705C3400A5ED4C /* Security.framework */; };
+		1A6A8EB41B705C3C00A5ED4C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EB31B705C3C00A5ED4C /* StoreKit.framework */; };
+		1A6A8EB61B705C4800A5ED4C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EB51B705C4800A5ED4C /* SystemConfiguration.framework */; };
+		1A6A8EB81B705C5000A5ED4C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EB71B705C5000A5ED4C /* libz.tbd */; };
+		1A6A8EBA1B705C6800A5ED4C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EB91B705C6800A5ED4C /* libsqlite3.tbd */; };
+		1A6A8EC41B705E7E00A5ED4C /* AlarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8EC31B705E7E00A5ED4C /* AlarmsTableViewController.swift */; };
+		1A6A8ECA1B70759B00A5ED4C /* AlarmsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8EC81B70759B00A5ED4C /* AlarmsTableViewCell.swift */; };
+		1A6A8ECB1B70759B00A5ED4C /* AlarmsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A6A8EC91B70759B00A5ED4C /* AlarmsTableViewCell.xib */; };
+		5977B95C4310D4704EA7610F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEABEDF81AD0D3C96A0E238 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +36,23 @@
 		1A531B2C1B70590F00EACAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A531B2F1B70590F00EACAD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A531B311B70590F00EACAD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A6A8EA41B705A4B00A5ED4C /* YouSnoozeYouLose3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouSnoozeYouLose3-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A6A8EA71B705BF500A5ED4C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1A6A8EA91B705C0600A5ED4C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1A6A8EAB1B705C0C00A5ED4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1A6A8EAD1B705C2400A5ED4C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1A6A8EAF1B705C2D00A5ED4C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1A6A8EB11B705C3400A5ED4C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1A6A8EB31B705C3C00A5ED4C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1A6A8EB51B705C4800A5ED4C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1A6A8EB71B705C5000A5ED4C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1A6A8EB91B705C6800A5ED4C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1A6A8EC31B705E7E00A5ED4C /* AlarmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewController.swift; sourceTree = "<group>"; };
+		1A6A8EC81B70759B00A5ED4C /* AlarmsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmsTableViewCell.swift; sourceTree = "<group>"; };
+		1A6A8EC91B70759B00A5ED4C /* AlarmsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmsTableViewCell.xib; sourceTree = "<group>"; };
+		7CEABEDF81AD0D3C96A0E238 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8703660FD6AC363FA4F68F23 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A8EE0950ED542754343DE132 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +60,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6A8EBA1B705C6800A5ED4C /* libsqlite3.tbd in Frameworks */,
+				1A6A8EB81B705C5000A5ED4C /* libz.tbd in Frameworks */,
+				1A6A8EB61B705C4800A5ED4C /* SystemConfiguration.framework in Frameworks */,
+				1A6A8EB41B705C3C00A5ED4C /* StoreKit.framework in Frameworks */,
+				1A6A8EB21B705C3400A5ED4C /* Security.framework in Frameworks */,
+				1A6A8EB01B705C2D00A5ED4C /* QuartzCore.framework in Frameworks */,
+				1A6A8EAE1B705C2400A5ED4C /* CoreLocation.framework in Frameworks */,
+				1A6A8EAC1B705C0C00A5ED4C /* CoreGraphics.framework in Frameworks */,
+				1A6A8EAA1B705C0600A5ED4C /* CFNetwork.framework in Frameworks */,
+				1A6A8EA81B705BF500A5ED4C /* AudioToolbox.framework in Frameworks */,
+				5977B95C4310D4704EA7610F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +80,10 @@
 		1A531B191B70590F00EACAD6 = {
 			isa = PBXGroup;
 			children = (
-				1A531B241B70590F00EACAD6 /* YouSnoozeYouLose3 */,
+				62E03965F53CE36518451CED /* Pods */,
 				1A531B231B70590F00EACAD6 /* Products */,
+				6578E9E7C70A233395F1F602 /* Frameworks */,
+				1A531B241B70590F00EACAD6 /* YouSnoozeYouLose3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +98,109 @@
 		1A531B241B70590F00EACAD6 /* YouSnoozeYouLose3 */ = {
 			isa = PBXGroup;
 			children = (
+				1A6A8EC21B705E2F00A5ED4C /* Fonts */,
+				1A6A8EC01B705E1800A5ED4C /* Headers */,
+				1A6A8EBF1B705E0E00A5ED4C /* Assets */,
+				1A6A8EBE1B705E0500A5ED4C /* PropertyLists */,
+				1A6A8EBD1B705DFA00A5ED4C /* ViewControllers */,
+				1A6A8EC71B70755900A5ED4C /* Objects */,
+				1A6A8EC61B70754F00A5ED4C /* Scripts/Functors */,
 				1A531B251B70590F00EACAD6 /* AppDelegate.swift */,
-				1A531B271B70590F00EACAD6 /* ViewController.swift */,
-				1A531B291B70590F00EACAD6 /* Main.storyboard */,
 				1A531B2C1B70590F00EACAD6 /* Assets.xcassets */,
-				1A531B2E1B70590F00EACAD6 /* LaunchScreen.storyboard */,
 				1A531B311B70590F00EACAD6 /* Info.plist */,
+				1A6A8EC11B705E2900A5ED4C /* Storyboards */,
 			);
 			path = YouSnoozeYouLose3;
+			sourceTree = "<group>";
+		};
+		1A6A8EBD1B705DFA00A5ED4C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A531B271B70590F00EACAD6 /* ViewController.swift */,
+				1A6A8EC31B705E7E00A5ED4C /* AlarmsTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A6A8EBE1B705E0500A5ED4C /* PropertyLists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PropertyLists;
+			sourceTree = "<group>";
+		};
+		1A6A8EBF1B705E0E00A5ED4C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		1A6A8EC01B705E1800A5ED4C /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1A6A8EA41B705A4B00A5ED4C /* YouSnoozeYouLose3-Bridging-Header.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		1A6A8EC11B705E2900A5ED4C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1A531B291B70590F00EACAD6 /* Main.storyboard */,
+				1A531B2E1B70590F00EACAD6 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		1A6A8EC21B705E2F00A5ED4C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		1A6A8EC61B70754F00A5ED4C /* Scripts/Functors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scripts/Functors;
+			sourceTree = "<group>";
+		};
+		1A6A8EC71B70755900A5ED4C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				1A6A8EC81B70759B00A5ED4C /* AlarmsTableViewCell.swift */,
+				1A6A8EC91B70759B00A5ED4C /* AlarmsTableViewCell.xib */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		62E03965F53CE36518451CED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8703660FD6AC363FA4F68F23 /* Pods.debug.xcconfig */,
+				A8EE0950ED542754343DE132 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6578E9E7C70A233395F1F602 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A6A8EB91B705C6800A5ED4C /* libsqlite3.tbd */,
+				1A6A8EB71B705C5000A5ED4C /* libz.tbd */,
+				1A6A8EB51B705C4800A5ED4C /* SystemConfiguration.framework */,
+				1A6A8EB31B705C3C00A5ED4C /* StoreKit.framework */,
+				1A6A8EB11B705C3400A5ED4C /* Security.framework */,
+				1A6A8EAF1B705C2D00A5ED4C /* QuartzCore.framework */,
+				1A6A8EAD1B705C2400A5ED4C /* CoreLocation.framework */,
+				1A6A8EAB1B705C0C00A5ED4C /* CoreGraphics.framework */,
+				1A6A8EA91B705C0600A5ED4C /* CFNetwork.framework */,
+				1A6A8EA71B705BF500A5ED4C /* AudioToolbox.framework */,
+				7CEABEDF81AD0D3C96A0E238 /* libPods.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A531B341B70590F00EACAD6 /* Build configuration list for PBXNativeTarget "YouSnoozeYouLose3" */;
 			buildPhases = (
+				2B0F3F5502BABE622105FC83 /* Check Pods Manifest.lock */,
 				1A531B1E1B70590F00EACAD6 /* Sources */,
 				1A531B1F1B70590F00EACAD6 /* Frameworks */,
 				1A531B201B70590F00EACAD6 /* Resources */,
+				F60791DF667752783AC90922 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -90,6 +231,7 @@
 		1A531B1A1B70590F00EACAD6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Tyler hostager";
 				TargetAttributes = {
@@ -124,10 +266,44 @@
 				1A531B301B70590F00EACAD6 /* LaunchScreen.storyboard in Resources */,
 				1A531B2D1B70590F00EACAD6 /* Assets.xcassets in Resources */,
 				1A531B2B1B70590F00EACAD6 /* Main.storyboard in Resources */,
+				1A6A8ECB1B70759B00A5ED4C /* AlarmsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B0F3F5502BABE622105FC83 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F60791DF667752783AC90922 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A531B1E1B70590F00EACAD6 /* Sources */ = {
@@ -135,7 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A531B281B70590F00EACAD6 /* ViewController.swift in Sources */,
+				1A6A8EC41B705E7E00A5ED4C /* AlarmsTableViewController.swift in Sources */,
 				1A531B261B70590F00EACAD6 /* AppDelegate.swift in Sources */,
+				1A6A8ECA1B70759B00A5ED4C /* AlarmsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +359,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -226,6 +405,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -246,23 +426,30 @@
 		};
 		1A531B351B70590F00EACAD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8703660FD6AC363FA4F68F23 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YouSnoozeYouLose3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tyhostager.YouSnoozeYouLose3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YouSnoozeYouLose3/YouSnoozeYouLose3-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1A531B361B70590F00EACAD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8EE0950ED542754343DE132 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YouSnoozeYouLose3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tyhostager.YouSnoozeYouLose3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YouSnoozeYouLose3/YouSnoozeYouLose3-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -285,6 +472,7 @@
 				1A531B361B70590F00EACAD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
