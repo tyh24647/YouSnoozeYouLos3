@@ -12,9 +12,11 @@ class AlarmsTableViewCell: PFTableViewCell {
     
     @IBOutlet weak var alarmTitleLabel: UILabel?
     @IBOutlet weak var alarmDaysLabel: UILabel?
+    @IBOutlet weak var alarmHoursLabel: UILabel?
     @IBOutlet weak var alarmMinutesLabel: UILabel?
-    @IBOutlet weak var alarmIsEnabledLabel: UILabel?
-    @IBOutlet weak var alarmDoesRepeatLabel: UILabel?
+    @IBOutlet weak var alarmIsEnabledSwitch: UISwitch?
+    
+    var alarmDoesRepeat: Bool?
     
 
     override func awakeFromNib() {
