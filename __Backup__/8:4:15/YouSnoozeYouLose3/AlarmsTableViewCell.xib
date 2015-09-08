@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8164.2" systemVersion="15A235d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Thin.ttf">
+            <string>Roboto-Thin</string>
+            <string>Roboto-Thin</string>
+            <string>Roboto-Thin</string>
+            <string>Roboto-Thin</string>
+            <string>Roboto-Thin</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="AlarmsTableViewCell" customModule="YouSnoozeYouLose3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJB-pG-lF7">
+                        <rect key="frame" x="68" y="19" width="7" height="37"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="42"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-4X-G5Q">
+                        <rect key="frame" x="75" y="18" width="76" height="44"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="42"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYB-Y3-EXM" userLabel="Title">
+                        <rect key="frame" x="166" y="12" width="118" height="35"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuR-4X-Rtu">
+                        <rect key="frame" x="263" y="22" width="51" height="31"/>
+                        <animations/>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MTWRF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP3-LI-W3j">
+                        <rect key="frame" x="166" y="37" width="62" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="62" id="aZX-jI-Xgq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQn-Vu-ia0">
+                        <rect key="frame" x="8" y="19" width="59" height="42"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="59" id="Gk6-iC-l07"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="42"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="PaV-4X-G5Q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1oj-9c-MwL"/>
+                    <constraint firstItem="RQn-Vu-ia0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="2Lc-z4-F5a"/>
+                    <constraint firstItem="FYB-Y3-EXM" firstAttribute="leading" secondItem="PaV-4X-G5Q" secondAttribute="trailing" constant="15" id="4GZ-6f-yTW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="FYB-Y3-EXM" secondAttribute="trailing" constant="28" id="5gZ-kz-Jkp"/>
+                    <constraint firstItem="dP3-LI-W3j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="29" id="83G-a0-2sx"/>
+                    <constraint firstItem="KJB-pG-lF7" firstAttribute="leading" secondItem="RQn-Vu-ia0" secondAttribute="trailing" constant="1" id="FU8-yr-zC0"/>
+                    <constraint firstItem="PaV-4X-G5Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Kxf-Nw-smk"/>
+                    <constraint firstItem="PaV-4X-G5Q" firstAttribute="leading" secondItem="KJB-pG-lF7" secondAttribute="trailing" id="MN5-AW-5aY"/>
+                    <constraint firstItem="FYB-Y3-EXM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="TLc-fZ-C1x"/>
+                    <constraint firstItem="RQn-Vu-ia0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="UyW-Ai-Ldj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="FYB-Y3-EXM" secondAttribute="bottom" constant="24" id="VYJ-OM-heK"/>
+                    <constraint firstItem="VuR-4X-Rtu" firstAttribute="leading" secondItem="dP3-LI-W3j" secondAttribute="trailing" constant="35" id="WKe-Gi-G3B"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dP3-LI-W3j" secondAttribute="bottom" constant="13" id="cW2-Wp-tbL"/>
+                    <constraint firstItem="VuR-4X-Rtu" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="dJ9-1f-x2J"/>
+                    <constraint firstItem="PaV-4X-G5Q" firstAttribute="leading" secondItem="RQn-Vu-ia0" secondAttribute="trailing" constant="8" symbolic="YES" id="f3R-KN-QeE"/>
+                    <constraint firstItem="KJB-pG-lF7" firstAttribute="firstBaseline" secondItem="RQn-Vu-ia0" secondAttribute="firstBaseline" id="l40-QM-IcT"/>
+                    <constraint firstItem="PaV-4X-G5Q" firstAttribute="centerY" secondItem="RQn-Vu-ia0" secondAttribute="centerY" id="mk6-bh-QVQ"/>
+                    <constraint firstItem="KJB-pG-lF7" firstAttribute="centerY" secondItem="VuR-4X-Rtu" secondAttribute="centerY" id="o3C-he-9Ta"/>
+                    <constraint firstItem="FYB-Y3-EXM" firstAttribute="leading" secondItem="dP3-LI-W3j" secondAttribute="leading" id="wHc-OQ-ZFC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="KJB-pG-lF7" secondAttribute="bottom" constant="15" id="zTE-QI-pqL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="alarmDaysLabel" destination="dP3-LI-W3j" id="TfS-yX-hSg"/>
+                <outlet property="alarmHoursLabel" destination="RQn-Vu-ia0" id="nOl-xX-sgt"/>
+                <outlet property="alarmIsEnabledSwitch" destination="VuR-4X-Rtu" id="h61-LR-g5D"/>
+                <outlet property="alarmMinutesLabel" destination="PaV-4X-G5Q" id="iMt-7b-hsK"/>
+                <outlet property="alarmTitleLabel" destination="FYB-Y3-EXM" id="bDd-25-LWG"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
