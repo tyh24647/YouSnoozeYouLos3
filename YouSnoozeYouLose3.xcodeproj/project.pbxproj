@@ -13,6 +13,8 @@
 		1A531B2D1B70590F00EACAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A531B2C1B70590F00EACAD6 /* Assets.xcassets */; };
 		1A531B301B70590F00EACAD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A531B2E1B70590F00EACAD6 /* LaunchScreen.storyboard */; };
 		1A54D2651B70957F0010120B /* SignUpInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A54D2641B70957F0010120B /* SignUpInViewController.swift */; };
+		1A5E63041B70FED00094ADBA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E63031B70FED00094ADBA /* FirstViewController.swift */; };
+		1A5E63061B7100110094ADBA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E63051B7100110094ADBA /* UserData.swift */; };
 		1A6A8EA81B705BF500A5ED4C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EA71B705BF500A5ED4C /* AudioToolbox.framework */; };
 		1A6A8EAA1B705C0600A5ED4C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EA91B705C0600A5ED4C /* CFNetwork.framework */; };
 		1A6A8EAC1B705C0C00A5ED4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6A8EAB1B705C0C00A5ED4C /* CoreGraphics.framework */; };
@@ -41,6 +43,8 @@
 		1A531B2F1B70590F00EACAD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A531B311B70590F00EACAD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A54D2641B70957F0010120B /* SignUpInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInViewController.swift; sourceTree = "<group>"; };
+		1A5E63031B70FED00094ADBA /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		1A5E63051B7100110094ADBA /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1A6A8EA41B705A4B00A5ED4C /* YouSnoozeYouLose3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouSnoozeYouLose3-Bridging-Header.h"; sourceTree = "<group>"; };
 		1A6A8EA71B705BF500A5ED4C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1A6A8EA91B705C0600A5ED4C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -127,6 +131,7 @@
 				1A531B271B70590F00EACAD6 /* ViewController.swift */,
 				1A6A8EC31B705E7E00A5ED4C /* AlarmsTableViewController.swift */,
 				1A54D2641B70957F0010120B /* SignUpInViewController.swift */,
+				1A5E63031B70FED00094ADBA /* FirstViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 			children = (
 				1A6A8EC81B70759B00A5ED4C /* AlarmsTableViewCell.swift */,
 				1A6A8EC91B70759B00A5ED4C /* AlarmsTableViewCell.xib */,
+				1A5E63051B7100110094ADBA /* UserData.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 				TargetAttributes = {
 					1A531B211B70590F00EACAD6 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = ZM57TK6EDW;
 					};
 				};
 			};
@@ -327,7 +334,9 @@
 			files = (
 				1A531B281B70590F00EACAD6 /* ViewController.swift in Sources */,
 				1A6A8EC41B705E7E00A5ED4C /* AlarmsTableViewController.swift in Sources */,
+				1A5E63061B7100110094ADBA /* UserData.swift in Sources */,
 				1A531B261B70590F00EACAD6 /* AppDelegate.swift in Sources */,
+				1A5E63041B70FED00094ADBA /* FirstViewController.swift in Sources */,
 				1A6A8ECA1B70759B00A5ED4C /* AlarmsTableViewCell.swift in Sources */,
 				1A54D2651B70957F0010120B /* SignUpInViewController.swift in Sources */,
 			);
@@ -446,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = YouSnoozeYouLose3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tyhostager.YouSnoozeYouLose3;
@@ -461,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = YouSnoozeYouLose3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tyhostager.YouSnoozeYouLose3;

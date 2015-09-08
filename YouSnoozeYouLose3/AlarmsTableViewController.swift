@@ -20,13 +20,14 @@ class AlarmsTableViewController: PFQueryTableViewController {
     var tableCellNib: UINib!
     var cellNibTitle: String!
     var cellNibBundle: NSBundle!
+    var tableData: [AlarmsTableViewCell?]!
     
     
     /******************************************
     *  MARK: SERIALIZE APPLICATION CONSTANTS  *
     ******************************************/
-    let DEFAULT_TABLE_CELL_HEIGHT: CGFloat = 60;
-    let DEFAULT_ITEMS_PER_PAGE: UInt = 25;
+    let DEFAULT_TABLE_CELL_HEIGHT: CGFloat = 80;
+    let DEFAULT_ITEMS_PER_PAGE: UInt = 15;
     let DEFAULT_REFRESH_STATE: Bool = true;
     let DEFAULT_PAGINATION_STATE: Bool = false;
     let DEFAULT_SELECTION_PERMISSIONS: Bool = false;
@@ -50,9 +51,10 @@ class AlarmsTableViewController: PFQueryTableViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(style: UITableViewStyle.Plain, className: "Alarm");
+        initTableViewDefaults("Alarm");
+        
         //let tmpStr = "NSCoding is not currently supported at this time";
         //fatalError(tmpStr);
-        initTableViewDefaults("Alarm");
     }
     
     
@@ -62,6 +64,9 @@ class AlarmsTableViewController: PFQueryTableViewController {
     ***************************************/
     override func viewDidLoad() {
         super.viewDidLoad();
+        self.tableView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0);
+        //self.tableView.contentInset = UIEdgeInsetsMake(60, 0, 0, 0);
+        //self.tableView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0);
     }
     
     
@@ -102,20 +107,28 @@ class AlarmsTableViewController: PFQueryTableViewController {
             cell?.alarmIsEnabledSwitch?.enabled = (pfObject["isEnabled"] as? Bool)!;
         }
         
-        /*
-        if (cell == nil) {
-            cell = PFTableViewCell(
-                style: DEFAULT_CELL_STYLE,
-                reuseIdentifier: cellIdentifier
-            );
+        /*///TEST
+        print("> Attempting to localize saved alarms from the cloud/database");
+        if (cell != nil) {
+            tableData! += [cell];
+            print(">\tData successfully saved");
+        } else {
+            print(">ERROR: Unable to save user cloud data\n\tCheck the implementation " +
+                "method: \"tableView\" in \"FirstViewController.swift\" for further troubleshooting");
         }
-        
-        if let pfObject = object {
-            cell?.textLabel?.text = pfObject["name"] as? String;
-        }
-        */
+        *///////
         
         return cell;
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            print("> Button pressed -> \'Delete\'\n> Removing alarm at index \'\(indexPath.row)\'...");
+            tableData.removeAtIndex(indexPath.row);
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left);
+            print("> Alarm successfully deleted");
+            printTableData();
+        }
     }
     
     
@@ -160,6 +173,10 @@ class AlarmsTableViewController: PFQueryTableViewController {
     
     
     func initTableViewDefaults() -> Void {
+        setSeparators();
+        setTitleAttributes();
+        init_navBarPrefs();
+        
         setPullToRefreshState(DEFAULT_REFRESH_STATE);
         setPaginationState(DEFAULT_PAGINATION_STATE);
         setNumObjectsPerPage(DEFAULT_ITEMS_PER_PAGE);
@@ -173,6 +190,68 @@ class AlarmsTableViewController: PFQueryTableViewController {
         );
         
         registerNibFromBundle();
+    }
+    
+    
+    func init_navBarPrefs() -> Void {
+        /*
+        let navBar: UINavigationBar! =  self.navigationController?.navigationBar;
+        navBar.titleVerticalPositionAdjustmentForBarMetrics(UIBarMetrics.CompactPrompt);
+        
+        navBar.titleTextAttributes = [
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont(name: "Roboto-Thin", size: 42)!
+        ];
+        
+        navBar.translucent = true;
+        self.navigationController!.navigationBar.layer.shadowOpacity = 0.6;
+        //navBar.opaque = false;
+        */
+
+        /*
+        navBar.alpha = 0.90;
+        let blur: UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark));
+        blur.tintColor = UIColor.whiteColor();
+        //blur.alpha = 0.25;  //         <-- Potentially creates error/broken images
+        blur.frame = navBar.frame;
+        self.navigationController!.navigationBar.layer.addSublayer(CALayer(layer: blur));
+        self.navigationController!.navigationBar.layer.shadowRadius = 2;
+        self.navigationController!.navigationBar.layer.shadowOffset = CGSizeMake(0, 3);
+        self.navigationController!.navigationBar.layer.shadowOpacity = 0.5;
+        self.navigationController!.navigationBar.layer.shadowColor = UIColor.grayColor().CGColor;
+        let barAppearance = UINavigationBar.appearance();
+        barAppearance.shadowImage = UIImage();
+        barAppearance.opaque = false;
+        barAppearance.translucent = true;
+        barAppearance.alpha = 0.25;
+        tabBarItem.title = "Alarms";
+        */
+
+        /*      TODO Add this once the edit button is placed
+        editButton.setTitleTextAttributes(
+            [NSFontAttributeName: UIFont(
+                name: "Roboto-Thin",
+                size: 24
+                )!],
+            forState: UIControlState.Normal
+        );
+        */
+    }
+    
+    
+    func setSeparators() -> Void {
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine;
+        tableView.separatorColor = UIColor.grayColor();
+    }
+    
+    
+    func setTitleAttributes() -> Void {
+        let attributes = [
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont(name: "Roboto-Thin", size: 30)!
+        ]
+        tabBarController?.navigationController?.navigationBar.titleTextAttributes = attributes;
+        //self.navigationController?.navigationBar.titleTextAttributes = attributes;
     }
     
     
@@ -364,7 +443,11 @@ class AlarmsTableViewController: PFQueryTableViewController {
         paginationEnabled = newPaginationState;
     }
     
-    
+    private func printTableData() {
+        print(">\n> Displaying user's saved alarms...");
+        dump(tableData);
+        print(">");
+    }
     
  
     
@@ -374,7 +457,22 @@ class AlarmsTableViewController: PFQueryTableViewController {
     
     
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        super.didReceiveMemoryWarning();
     }
 }
+
+
+
+
+/*
+if (cell == nil) {
+cell = PFTableViewCell(
+style: DEFAULT_CELL_STYLE,
+reuseIdentifier: cellIdentifier
+);
+}
+
+if let pfObject = object {
+cell?.textLabel?.text = pfObject["name"] as? String;
+}
+*/

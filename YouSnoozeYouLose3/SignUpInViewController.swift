@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpInViewController: UIViewController {
+class SignUpInViewController: UIViewController, UITextFieldDelegate {
 
     //@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView;
@@ -42,7 +42,9 @@ class SignUpInViewController: UIViewController {
         self.activityIndicator.hidesWhenStopped = true;
         self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray;
         view.addSubview(self.activityIndicator);
-        
+        password.delegate = self;
+        //preferredStatusBarStyle();
+        //setNeedsStatusBarAppearanceUpdate();
         /*
         setActivityIndicatorVisibility(DEFAULT_ACTIVITY_INDICATOR_VISIBILITY);
         setActivityIndicatorVisibility(DEFAULT_ACTIVITY_INDICATOR_VISIBILITY);
@@ -178,17 +180,24 @@ class SignUpInViewController: UIViewController {
             return;
         }
         
-        alert = UIAlertController(
-            title: newTitle,
-            message: newMessage,
-            preferredStyle: newStyle
-        );
-        
+        alert = UIAlertController(title: newTitle, message: newMessage, preferredStyle: newStyle);
         
         alert.addAction(DEFAULT_ALERT_ACTION);
         presentViewController(alert, animated: true, completion: nil);
     }
     
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        password.resignFirstResponder();
+        signIn(textField);
+        return true;
+    }
+    
+    /*
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent;
+    }
+    */
     
     
     func animateIndicator() -> Void {
@@ -255,21 +264,14 @@ class SignUpInViewController: UIViewController {
         
         
         func assignAlertMsg(newAlertMsg: String) -> Void {
-            if newAlertMsg.isEmpty {
-                //print(newAlertMsg);
-                return;
-            }
+            if (newAlertMsg.isEmpty) { return; }
             alertMsg = newAlertMsg;
         }
         
         
         
         func assignMsgTitle(newTitle: String) -> Void {
-            if newTitle.isEmpty {
-                //print(newTitle);
-                //msgTitle = "ERROR!";
-                return;
-            }
+            if (newTitle.isEmpty) { return; }
             msgTitle = newTitle;
         }
     
